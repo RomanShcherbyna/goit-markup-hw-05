@@ -153,6 +153,9 @@ ul > .linknow a {
   color: var(--primary_text_color);
   font-weight: 500;
   letter-spacing: 0.02em;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .head_navigator:hover {
   color: var(--hover_text_color);
@@ -166,7 +169,11 @@ ul > .linknow a {
   letter-spacing: 0.02em;
   color: var(--second_text_color);
   align-items: center;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .phone-mail .mailphone-head:hover{
   color: var(--hover_text_color);
 }
@@ -217,6 +224,10 @@ ul > .linknow a {
   margin-left: auto;
   margin-right: auto;
   border: none;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 .button-hero:hover {
   background-color: rgb(0, 140, 255);
@@ -291,6 +302,9 @@ text-transform: uppercase;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition-property: background-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-media li {
@@ -298,7 +312,7 @@ text-transform: uppercase;
 }
 .social-media li:first-child {
   margin-left: 0px;
-
+ 
 }
 .social-media .block:hover,
 .social-media .block:focus,
@@ -393,9 +407,7 @@ color: var(--white_color_text);
   color: var(--white_color_text);
   margin-bottom: 9px;
 }
-.adress-footer {
-  color: var(--mailphone_footer);
-}
+
 .contact-footer .item:not(:last-child) {
   margin-bottom: 9px;
 }
@@ -418,6 +430,9 @@ color: var(--white_color_text);
   align-items: center;
   justify-content: center;
   margin-right: 30px;
+   transition-property: border, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client .block:last-child {
   margin-right: 0px;
@@ -448,7 +463,12 @@ color: var(--white_color_text);
 .adress {
   margin-top: 20px;
 }
-
+.adress-footer {
+  color: var(--mailphone_footer);
+   transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 .adress-footer,
 .adres_street {
   font-family: 'Roboto';
@@ -456,6 +476,7 @@ color: var(--white_color_text);
   cursor: default;
   line-height: 1.71;
   font-weight: 400;
+ 
 }
 .adress-footer:hover,
 :focus {
@@ -487,6 +508,9 @@ color: var(--white_color_text);
   display: flex;
   justify-content: center;
   align-items: center;
+   transition-property: background-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .social-media-foot .block a {
@@ -519,6 +543,9 @@ color: var(--white_color_text);
   padding-left: 22px;
   border: 0;
   border-radius: 4px;
+   transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-portf button:hover {
   background-color: var(--hover_text_color);
@@ -560,22 +587,64 @@ color: var(--white_color_text);
 }
 .img {
   position: relative;
-}
+  overflow: hidden;
+/* }
 .img::after {
-  content: "Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.";
+  content: "";
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
   position: absolute;
   display: inline-block;
+  color: var(--white_color_text);
+  padding-top: 63px;
+  padding-bottom: 63px;
+  padding-right: 24px;
+  padding-left: 24px;
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
   transform: translateY(100%);
   background: rgba(33, 150, 243, 0.9);
+  transition-property: translateY(100%);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
-.shadow:hover .img::after,
+/* .shadow:hover .img::after,
 .shadow:focus .img::after {
+  transform: translateY(0); 
+} */
+.hover-text-block-portf {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  position: absolute;
+  display: inline-block;
+  color: var(--white_color_text);
+  padding-top: 63px;
+  padding-bottom: 63px;
+  padding-right: 24px;
+  padding-left: 24px;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transform: translateY(100%);
+  background: rgba(33, 150, 243, 0.9);
+  transition-property: translateY(100%);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.shadow:hover .hover-text-block-portf,
+.shadow:focus .hover-text-block-portf {
   transform: translateY(0);
-
 }
 .image-text .img {
   min-width: 370px;
