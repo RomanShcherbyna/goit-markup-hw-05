@@ -572,7 +572,8 @@ color: var(--white_color_text);
   transform: translateY(100%);
   background: rgba(33, 150, 243, 0.9);
 }
-.image-text .shadow:focus .img::after {
+.shadow:hover .img::after,
+.shadow:focus .img::after {
   transform: translateY(0);
 
 }
